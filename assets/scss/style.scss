@@ -1,0 +1,151 @@
+@import "normalize";
+@import "foundation";
+@import "genericons/genericons";
+
+// Variables
+
+// $blue: #00adef;
+// $facebook-blue: #3B5998;
+// // $orange: #e67e22;
+// // $orange: #e74c3c;
+// $orange: #e54b00;
+// // $orange: #ed1c24;
+// $yellow: #f1c40f;
+// // $yellow: #fc0;
+
+// Mixins
+
+@mixin mq($point) {
+  @if $point == large {
+    @media (min-width: 64.375em) { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: 50em) { @content; }
+  }
+  @else if $point == small {
+    @media (min-width: 37.5em)  { @content; }
+  }
+}
+
+::selection {
+	background: rgba(51, 51, 51, 0.5);
+	color: #fff;
+	}
+::-moz-selection {
+	background: rgba(51, 51, 51, 0.5);
+	color: #fff;
+}
+
+html, body {
+	min-height: 100%;
+}
+
+body {
+	background: #fefefe;
+	font: {
+		size: 100%;
+	}
+	// color: #fefefe;
+	color: #222;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+* {
+	transition: 0.2s;
+}
+
+:focus {
+	outline: none;
+}
+
+.inner {
+	width: 100%;
+	// padding: 2rem 7% 3rem;
+	overflow: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+h1 {
+
+}
+
+h2 {
+	
+}
+
+p {
+	margin-bottom: 1.75rem;
+}
+
+header, footer, section {
+	overflow: auto;
+	width: 100%;
+}
+
+.masonry {
+	max-width: none;
+}
+
+.grid-item {
+	padding: 5rem;
+
+	&:nth-child(odd) {background: #fa5c5c;}
+	&:nth-child(even) {background: #fa6a6a;}
+}
+
+// Form Reset
+
+input[placeholder],
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select,
+option {
+	// width: 100%;
+	// max-width: 35rem;
+	display: block;
+	margin-bottom: 1.25rem;
+	padding: .8rem;
+	border: none;
+	border-radius: 0;
+	// background: rgba(#fff, 0.8);
+	font: inherit;
+	font: {
+		size: 1em;
+	}
+
+	&:hover, &:focus {
+		// background: rgba(#000, 0.5);
+		// color: #fff;
+	}
+
+}
+
+option {
+	// color: #222;
+
+	// &:hover, &:focus {
+	// 	background: white;
+	// }
+}
+
+input[type="submit"] {
+	// border: 10px solid;
+	// background: #fff;
+	padding: .9rem 2rem;
+	font: inherit;
+	// color: #333;
+	// border-radius: 0;
+	// font: {
+	// 	weight: 700;
+	// }
+	// text-transform: uppercase;
+}

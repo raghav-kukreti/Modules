@@ -1,0 +1,64 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": [
+        "assets"
+    ],
+    "preprocessorScriptOutput": "assets/js",
+    "preprocessorStyleOutput": "assets/css",
+    "projectName": "Modules",
+    "projectDescription": "A magazine covering the ins and outs of usic, written by people like you.",
+    "publishedId": "15235",
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout-article",
+    "templateDefaultPage": "index",
+    "type": "mixture",
+    "useCompass": false,
+    "simpleModePartnerServer": null,
+    "simpleModeFileTypes": null,
+    "modelSource": null,
+    "domain": "beta.modulesmagazine.com",
+    "convertHtml": {
+        "path": null,
+        "extension": ".html",
+        "ignoreUrls": null,
+        "relativePaths": false,
+        "default": null
+    },
+    "followLeader": true,
+    "routes": null,
+    "customRuby": false,
+    "customRubyPath": null,
+    "remoteDebugPort": 0,
+    "optimiseImages": true,
+    "password": "inkdied",
+    "ignoreDir": [
+        "node_modules"
+    ],
+    "customTodos": null,
+    "autoPrefixer": {
+        "active": true,
+        "browsers": [
+            "last 1 version",
+            "> 1%",
+            "ie 8",
+            "ie 7"
+        ],
+        "sourceMap": false
+    },
+    "sass": {
+        "outputStyle": "nested",
+        "sourceMap": false,
+        "cache": false,
+        "lineNumbers": false,
+        "globbing": false,
+        "useLibSass": true,
+        "debugInfo": false
+    },
+    "sitemap": false,
+    "less": null,
+    "optimiseSVG": true,
+    "reload": 0
+}

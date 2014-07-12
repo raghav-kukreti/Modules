@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Title block allowing child pages to override -->
+        <title>{{ model.title }} by {{ model.author-name }} &middot; Issue {{ model.issue }} &mdash; Modules Magazine</title>
+        <link rel="shortcut icon" type="image/ico" href="/favicon.ico" />
+        <!-- Styles -->
+        {{ "app.css" | asset_url | stylesheet_tag }}
+        <!-- Style block allowing child pages to inject their own styles -->
+        {% block styles %}{% endblock %}
+
+    </head>
+    <body>
+        
+            <!-- Include -->
+            {% include "header" %}
+            
+            <h1>{{ model.title }}</h1>
+            <h2>{{ model.subtitle }}</h2>
+
+            <h3>Some thoughts on <em>{{ model.topic }}</em> by <em>{{ model.author-name }}</em></h3>
+
+            <code>
+                Issue {{ model.issue }} &mdash; Published on
+                
+                {% if model.issue == 1 %}
+                  <time datetime="2014-07-28">28<sup>th</sup> July 2014</time>
+                {% elsif model.issue == 2 %}
+                  <time datetime="2014-09-28">13<sup>th</sup> September 2014</time>
+                {% endif %}
+
+            </code>
+
+            {% if model.author-facebook %}
+                http://facebook.com/{{ model.author-facebook }}
+            {% else %} Author isn't on facebook
+            {% endif %}
+
+            <p>{{ model.author-name | truncatewords:1,more | slugify}}</p>
+
+            {% block content %}{% endblock %}
+        
+        <!-- Script block allowing child pages to inject their own scripts -->
+        {% block scripts %}{% endblock %}
+        {{ "app.js" | asset_url | script_tag }}
+    </body>
+</html>
