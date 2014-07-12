@@ -38,13 +38,14 @@
                 {% collection "article" %}
 
                           {% for post in collection.items by 2 %}
-                            <div class="columns large-6 grid-item"
+                            <!-- <div class="columns large-6 grid-item"
                              style="background-image: url(
                                 /assets/img/article-banners/{{ post.slug | remove:'/article/' }}.jpg
-                             );">
-
+                             );"> -->
+                              <div class="columns large-6 grid-item posts">
                                 <a href="{{ post.slug }}">
                                     <h3>{{ post.title }} &mdash; {{ post.author-name }}</h3>
+                                    <h4><em>{{ post.subtitle }}</em></h4>
                                 </a>
                             </div>
                           {% endfor %}
